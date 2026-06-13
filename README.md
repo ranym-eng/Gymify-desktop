@@ -1,117 +1,272 @@
 # Gymify Desktop
 
-Système de Gestion de Salle de Sport
+## Système de Gestion de Salle de Sport
 
-Aperçu
-Ce projet est une application desktop développée dans le cadre des cours de l'École d'Ingénieurs Esprit pour l'année universitaire 2024-2025. Elle est conçue pour gérer plusieurs salles de sport, permettant aux administrateurs, responsables de salles, entraîneurs et sportifs de gérer diverses opérations telles que la gestion des utilisateurs, des activités, des abonnements, des événements, des cours, des paiements, des avis et des blogs. L'application vise à rationaliser les opérations des salles de sport et à améliorer l'expérience utilisateur grâce à une interface intuitive et réactive.
-Fonctionnalités
+Gymify Desktop est une application desktop développée dans le cadre des cours de l’École d’Ingénieurs ESPRIT pour l’année universitaire 2024-2025.
 
-Panneau d'administration : Gérer les utilisateurs, les salles de sport, les activités, les réclamations et les produits pour toutes les succursales.
-Tableau de bord du responsable de salle : Ajouter des abonnements pour chaque salle, des événements et des équipes spécifiques à la salle attribuée.
-Interface entraîneur : Organiser et gérer les cours et les planning.
-Portail sportif : Consulter les activités, abonnements, événements,cours et produit ,effectuer des paiements, gérer les avis et contribuer aux blogs,participer a une evenement.
-Support multi-salles : Gestion centralisée pour plusieurs succursales avec des fonctionnalités spécifiques à chaque site.
-Design réactif : Optimisé pour une utilisation sur ordinateurs, tablettes et appareils mobiles.
+L’application permet de gérer plusieurs salles de sport à travers une plateforme centralisée destinée aux administrateurs, responsables de salles, entraîneurs et sportifs. Elle couvre plusieurs modules : gestion des utilisateurs, salles, activités, abonnements, événements, cours, paiements, avis, blogs, produits et réclamations.
 
-Pile Technologique
-Frontend
+---
 
-fxml: Pour une interface utilisateur dynamique et réactive.
-CSS : Pour un style moderne et efficace.
-Backend
+## Table des matières
 
-Java
-Xampp: Pour stocker les données des utilisateurs, informations des salles, abonnements, etc.
+* [Aperçu du projet](#aperçu-du-projet)
+* [Fonctionnalités](#fonctionnalités)
+* [Rôles utilisateurs](#rôles-utilisateurs)
+* [Pile technologique](#pile-technologique)
+* [Structure du projet](#structure-du-projet)
+* [Prérequis](#prérequis)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [Lancement de l’application](#lancement-de-lapplication)
+* [Présentation](#présentation)
+* [Topics](#topics)
+* [Remerciements](#remerciements)
 
-Autres Outils
+---
 
-JWT (JSON Web Tokens) : Pour une authentification et une autorisation sécurisées.
-Stripe : Pour le traitement des paiements en ligne.
-Git : Pour le contrôle de version.
-GitHub : Pour l'hébergement du dépôt du projet.
-Recaptcha: Pour securité
-Google Calendar: pour gerer les cours
-Meteo: Pour afficher le meteo
+## Aperçu du projet
 
+Gymify Desktop vise à simplifier la gestion quotidienne des salles de sport en proposant une interface intuitive, moderne et réactive.
 
-Structure du Répertoire
+L’application permet notamment de :
+
+* gérer plusieurs salles de sport depuis une seule plateforme ;
+* administrer les utilisateurs selon leurs rôles ;
+* gérer les abonnements, cours, événements et paiements ;
+* organiser les plannings des entraîneurs ;
+* permettre aux sportifs de consulter les offres, participer aux événements et publier des avis ;
+* intégrer des services externes comme Stripe, Google Calendar, reCAPTCHA et la météo.
+
+---
+
+## Fonctionnalités
+
+### Administration
+
+* Gestion des utilisateurs.
+* Gestion des salles de sport.
+* Gestion des activités.
+* Gestion des réclamations.
+* Gestion des produits.
+* Supervision globale des différentes succursales.
+
+### Responsable de salle
+
+* Ajout et gestion des abonnements.
+* Gestion des événements propres à la salle.
+* Gestion des équipes affectées à la salle.
+* Suivi des opérations liées à une succursale spécifique.
+
+### Entraîneur
+
+* Création et gestion des cours.
+* Organisation des plannings.
+* Suivi des séances sportives.
+
+### Sportif
+
+* Consultation des activités.
+* Consultation des abonnements.
+* Consultation des événements.
+* Consultation des cours.
+* Consultation et achat de produits.
+* Paiement en ligne.
+* Participation aux événements.
+* Gestion des avis.
+* Contribution aux blogs.
+
+### Fonctionnalités transversales
+
+* Authentification sécurisée avec JWT.
+* Paiement en ligne avec Stripe.
+* Protection avec reCAPTCHA.
+* Gestion des cours avec Google Calendar.
+* Affichage de la météo.
+* Système de recommandation basé sur l’intelligence artificielle / machine learning.
+* Support multi-salles.
+
+---
+
+## Rôles utilisateurs
+
+L’application prend en charge plusieurs profils :
+
+| Rôle                 | Description                                                                                                |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Administrateur       | Gère l’ensemble de la plateforme, les utilisateurs, les salles, les produits et les réclamations.          |
+| Responsable de salle | Gère les abonnements, événements et équipes liés à sa salle.                                               |
+| Entraîneur           | Organise les cours et les plannings.                                                                       |
+| Sportif              | Consulte les offres, effectue des paiements, participe aux événements et interagit avec les blogs et avis. |
+
+---
+
+## Pile technologique
+
+### Frontend
+
+* JavaFX
+* FXML
+* CSS
+
+### Backend
+
+* Java
+* Maven
+* MySQL
+* XAMPP
+
+### Sécurité
+
+* JWT pour l’authentification et l’autorisation.
+* reCAPTCHA pour renforcer la sécurité.
+
+### Services externes
+
+* Stripe pour les paiements en ligne.
+* Google Calendar pour la gestion des cours.
+* API météo pour l’affichage des conditions météorologiques.
+
+### Outils
+
+* Git pour le contrôle de version.
+* GitHub pour l’hébergement du dépôt.
+* Maven pour la gestion des dépendances.
+
+---
+
+## Structure du projet
+
+```bash
 gymify/
-├── java/                   
-│   ├── controllers/                
-│   ├── entities/                   
-│   └──services/  
-    └──tests/
-    └──utils/
-    
-├── resources/ 
-    └──assets/
-│   ├── config/  
-    └── images/
-│   ├── readme-images/                 
-│   ├── recommender/                 
+├── java/
+│   ├── controllers/
+│   ├── entities/
+│   ├── services/
+│   ├── tests/
+│   └── utils/
+│
+├── resources/
+│   ├── assets/
+│   ├── config/
+│   ├── images/
+│   ├── readme-images/
+│   ├── recommender/
 │   └── Uploads/
+│
 ├── pom.xml
-├── README.md                  
-└── .gitignore                  
+├── README.md
+└── .gitignore
+```
 
-Premiers Pas
-Prérequis
+---
 
-Java 
-Xampp (instance locale)
-Git
-Compte Stripe pour l'intégration des paiements
+## Prérequis
 
-Installation
+Avant de lancer le projet, assurez-vous d’avoir installé :
 
-Cloner le dépôt :git clone https://github.com/alouiamani/DevAthletes/
+* Java
+* Maven
+* XAMPP
+* MySQL
+* Git
+* Un compte Stripe pour l’intégration du paiement en ligne
 
+---
 
-Naviguer dans le répertoire du projet :cd DevAthletes
+## Installation
 
+### 1. Cloner le dépôt
 
-Installer les dépendances:
+```bash
+git clone https://github.com/alouiamani/DevAthletes/
+```
+
+### 2. Accéder au dossier du projet
+
+```bash
+cd DevAthletes
+```
+
+### 3. Installer les dépendances Maven
+
+Depuis votre IDE, vous pouvez utiliser :
+
+```bash
 maven:reload project
+```
 
+Ou en ligne de commande :
 
-Configurer les variables d'environnement :
-Créer un fichier gymifyDataBase
-Ajouter les variables suivantes : URL = "jdbc:mysql://localhost:3306/projweb";
+```bash
+mvn clean install
+```
 
+---
 
+## Configuration
 
-Lancement de l'Application
+### Base de données
 
-Démarrer l'application:
+1. Démarrer XAMPP.
+2. Lancer Apache et MySQL.
+3. Créer une base de données MySQL nommée :
+
+```sql
+projweb
+```
+
+### Configuration de la connexion
+
+Créer ou modifier le fichier de configuration de la base de données, puis ajouter l’URL suivante :
+
+```java
+URL = "jdbc:mysql://localhost:3306/projweb";
+```
+
+Vérifiez également que les identifiants MySQL correspondent à votre configuration locale.
+
+---
+
+## Lancement de l’application
+
+Pour lancer l’application JavaFX, utilisez la commande suivante :
+
+```bash
 javafx:run
+```
 
+Ou via Maven :
 
-Utilisation
+```bash
+mvn javafx:run
+```
 
-Administrateur : Connectez-vous pour gérer les utilisateurs, les salles, les réclamations et les produits.
-Responsable de salle : Accédez au tableau de bord pour ajouter des abonnements, événements ou équipes pour votre salle.
-Entraîneur : Créez et gérez des cours et des plannings.
-Sportif : Consulter les activités, abonnements, événements,cours et produit ,effectuer des paiements, gérer les avis et contribuer aux blogs,participer a une evenement.
+---
 
-Étiquettes (Topics)
+## Utilisation
 
-Application desktop
-java
-AI
-machine learning
-Xampp
-intégration-paiement
+### Administrateur
 
+L’administrateur peut se connecter afin de gérer les utilisateurs, les salles, les activités, les réclamations et les produits.
 
-Remerciements
-Ce projet a été réalisé sous la direction du corps professoral de l'École d'Ingénieurs Esprit. Un grand merci à nos professeurs  Madame Chaima et Monsieur Moataz pour leur soutien et leurs retours tout au long du développement.
+### Responsable de salle
 
+Le responsable de salle accède à son tableau de bord pour gérer les abonnements, les événements et les équipes liés à sa salle.
 
+### Entraîneur
 
+L’entraîneur peut créer, modifier et organiser les cours ainsi que les plannings.
 
-## Presentation
+### Sportif
 
-Vous pouvez consulter la presentation complete ici :
+Le sportif peut consulter les activités, abonnements, événements, cours et produits. Il peut également effectuer des paiements, gérer ses avis, contribuer aux blogs et participer aux événements.
+
+---
+
+## Présentation
+
+Vous pouvez consulter la présentation complète du projet ici :
 
 [Telecharger la presentation PDF](Gymify-web-desktop-presentation.pdf)
 
@@ -170,4 +325,31 @@ Vous pouvez consulter la presentation complete ici :
 ![Slide 51](docs/presentation/slide-51.png)
 ![Slide 52](docs/presentation/slide-52.png)
 
+---
 
+## Topics
+
+* Application desktop
+* Java
+* JavaFX
+* FXML
+* CSS
+* MySQL
+* XAMPP
+* Maven
+* Stripe
+* JWT
+* reCAPTCHA
+* Google Calendar
+* API météo
+* Intelligence artificielle
+* Machine Learning
+* Paiement en ligne
+
+---
+
+## Remerciements
+
+Ce projet a été réalisé sous la direction du corps professoral de l’École d’Ingénieurs ESPRIT.
+
+Nous remercions particulièrement Madame Chaima et Monsieur Moataz pour leur accompagnement, leur soutien et leurs retours tout au long du développement du projet.
