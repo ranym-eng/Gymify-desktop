@@ -95,7 +95,7 @@ Sportif : Consulter les activités, abonnements, événements,cours et produit ,
 
 Étiquettes (Topics)
 
-Application disktop
+Application desktop
 java
 AI
 machine learning
