@@ -1,0 +1,145 @@
+/* Root and global styles */
+.root {
+    -fx-font-family: "Roboto", "Arial", sans-serif;
+    -fx-background-color: linear-gradient(to bottom, #E8ECEF, #F5F5F5);
+}
+
+/* Header bar */
+.header-bar {
+    -fx-background-color: linear-gradient(to bottom, #1E3A8A, #1E40AF);
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2);
+}
+
+/* Headings */
+.label-heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E3A8A;
+    -fx-padding: 5px 0;
+}
+
+/* Regular labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1F2937;
+}
+
+/* Error labels */
+.label-error {
+    -fx-font-size: 12px;
+    -fx-text-fill: #EF4444;
+    -fx-graphic-text-gap: 5px;
+    -fx-opacity: 0.9;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to right, #3B82F6, #2563EB);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #2563EB, #1E40AF);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button-cancel {
+    -fx-background-color: linear-gradient(to right, #EF4444, #DC2626);
+}
+
+.button-cancel:hover {
+    -fx-background-color: linear-gradient(to right, #DC2626, #B91C1C);
+}
+
+.button-secondary {
+    -fx-background-color: linear-gradient(to right, #6B7280, #4B5563);
+}
+
+.button-secondary:hover {
+    -fx-background-color: linear-gradient(to right, #4B5563, #374151);
+}
+
+/* Back button */
+.back-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.back-button .image-view {
+    -fx-opacity: 0.7;
+}
+
+/* Text fields and choice boxes */
+.text-field, .choice-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-background-insets: 0;
+    -fx-border-width: 1px;
+}
+
+.text-field:focused, .choice-box:focused {
+    -fx-border-color: #3B82F6;
+    -fx-border-width: 2px;
+}
+
+/* Search field */
+.search-field {
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 30px 10px 10px;
+    -fx-graphic-text-gap: 10px;
+}
+
+/* Subscription card */
+.subscription-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 12, 0, 0, 3);
+    -fx-pref-width: 300px;
+}
+
+.subscription-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* FlowPane for cards */
+.flow-pane {
+    -fx-hgap: 20px;
+    -fx-vgap: 20px;
+    -fx-padding: 25px;
+    -fx-alignment: center;
+}
+
+/* Form container */
+.form-vbox {
+    -fx-spacing: 20px;
+    -fx-padding: 25px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 12, 0, 0, 3);
+    -fx-pref-width: 600px;
+}
+
+/* Tooltip */
+.tooltip {
+    -fx-background-color: #1F2937;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+}

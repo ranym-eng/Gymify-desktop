@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="700.0" styleClass="main-container" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gymify.controllers.SalleCardController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="350.0" prefWidth="650.0" styleClass="card-container">
+         <children>
+            <ImageView fx:id="salleImageView" fitHeight="250.0" fitWidth="250.0" styleClass="card-image" accessibleText="Gym Image">
+               <HBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox prefHeight="250.0" prefWidth="350.0" spacing="15.0">
+               <children>
+                  <Label fx:id="nomLabel" styleClass="card-title" text="Gym Name" accessibleText="Gym Name" />
+                  <HBox spacing="10.0">
+                     <ImageView fitHeight="24.0" fitWidth="24.0" styleClass="icon-image" accessibleText="Location Icon">
+                        <image>
+                           <Image url="@images/adresse (1).png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="adresseLabel" styleClass="card-text" text="Address" accessibleText="Gym Address" />
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <ImageView fitHeight="24.0" fitWidth="24.0" styleClass="icon-image" accessibleText="Details Icon">
+                        <image>
+                           <Image url="@images/fichier.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="detailsLabel" styleClass="card-text card-details" text="Details" wrapText="true" accessibleText="Gym Details" />
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <ImageView fitHeight="24.0" fitWidth="24.0" styleClass="icon-image" accessibleText="Phone Icon">
+                        <image>
+                           <Image url="@images/telephone.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="numTelLabel" styleClass="card-text" text="Phone" accessibleText="Gym Phone Number" />
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <ImageView fitHeight="24.0" fitWidth="24.0" styleClass="icon-image" accessibleText="Email Icon">
+                        <image>
+                           <Image url="@images/gmail.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="emailLabel" styleClass="card-text" text="Email" accessibleText="Gym Email" />
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <Button fx:id="modifierBtn" onAction="#modifierSalle" prefHeight="50.0" prefWidth="50.0" styleClass="icon-button" accessibleText="Edit Gym Button">
+                        <graphic>
+                           <ImageView fitHeight="30.0" fitWidth="30.0" styleClass="icon-image" accessibleText="Edit Icon">
+                              <image>
+                                 <Image url="@images/editer.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                        <tooltip>
+                           <Tooltip text="Edit Gym" />
+                        </tooltip>
+                     </Button>
+                     <Button fx:id="supprimerBtn" onAction="#supprimerSalle" prefHeight="50.0" prefWidth="50.0" styleClass="icon-button" accessibleText="Delete Gym Button">
+                        <graphic>
+                           <ImageView fitHeight="30.0" fitWidth="30.0" styleClass="icon-image" accessibleText="Delete Icon">
+                              <image>
+                                 <Image url="@images/delete.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                        <tooltip>
+                           <Tooltip text="Delete Gym" />
+                        </tooltip>
+                     </Button>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

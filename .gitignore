@@ -1,0 +1,69 @@
+target/
+node_modules/
+**/node_modules/
+
+# Local IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime/generated files
+uploads/
+*.log
+hs_err_pid*.log
+replay_pid*.log
+captcha.png
+tokens/
+
+# Local installers, SDKs, and bundled binaries
+*.exe
+mylibs/openjfx-17/
+
+# Secrets and local config
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.jks
+src/main/resources/secretkey.json
+src/main/resources/client_secret_*.json
+src/main/resources/config/*.properties
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store

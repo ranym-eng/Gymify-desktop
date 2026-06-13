@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" styleClass="main-container" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gymify.controllers.SalleFormAdminController">
+    <top>
+        <HBox styleClass="header-bar" prefHeight="70.0">
+            <children>
+                <Label text="Add Gym" styleClass="header-title" accessibleText="Add Gym Header" />
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <HBox styleClass="card-container" alignment="CENTER" spacing="30.0">
+            <children>
+                <VBox spacing="20.0" styleClass="form-section" prefWidth="400.0">
+                    <children>
+                        <Label text="Gym Name" styleClass="form-label" accessibleText="Gym Name Label" />
+                        <TextField fx:id="nomFX" styleClass="input-field" promptText="Enter gym name" accessibleText="Gym Name Input" />
+                        <Label fx:id="errorNom" styleClass="error-label" accessibleText="Gym Name Error" />
+
+                        <Label text="Address" styleClass="form-label" accessibleText="Address Label" />
+                        <TextField fx:id="adresseFX" styleClass="input-field" promptText="Enter address" accessibleText="Address Input" />
+                        <Label fx:id="errorAdresse" styleClass="error-label" accessibleText="Address Error" />
+
+                        <Label text="Details" styleClass="form-label" accessibleText="Details Label" />
+                        <TextArea fx:id="detailsFX" prefHeight="100.0" styleClass="input-field" promptText="Enter details" accessibleText="Details Input" />
+                        <Label fx:id="errorDetails" styleClass="error-label" accessibleText="Details Error" />
+
+                        <Label text="Phone Number" styleClass="form-label" accessibleText="Phone Number Label" />
+                        <TextField fx:id="numtelFX" styleClass="input-field" promptText="Enter phone number" accessibleText="Phone Number Input" />
+                        <Label fx:id="errorNumTel" styleClass="error-label" accessibleText="Phone Number Error" />
+
+                        <Label text="Email" styleClass="form-label" accessibleText="Email Label" />
+                        <TextField fx:id="emailFX" styleClass="input-field" promptText="Enter email" accessibleText="Email Input" />
+                        <Label fx:id="errorEmail" styleClass="error-label" accessibleText="Email Error" />
+                    </children>
+                </VBox>
+                <VBox spacing="20.0" styleClass="preview-section" prefWidth="300.0">
+                    <children>
+                        <Label text="Gym Photo Preview" styleClass="form-label" accessibleText="Photo Preview Label" />
+                        <ImageView fx:id="photoPreview" fitHeight="150.0" fitWidth="150.0" styleClass="card-image" accessibleText="Gym Photo Preview">
+                            <image>
+                                <Image url="@images/placeholder.jpg" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="url_photoFX" styleClass="input-field" promptText="Enter photo URL" accessibleText="Photo URL Input" />
+                        <Label fx:id="errorUrlPhoto" styleClass="error-label" accessibleText="Photo URL Error" />
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox spacing="25.0" alignment="CENTER" styleClass="button-bar">
+            <children>
+                <Button onAction="#btnAnnuler" styleClass="secondary-button" text="Cancel" prefWidth="200.0" accessibleText="Cancel Button" />
+                <Button onAction="#btnEnregistrer" styleClass="primary-button" text="Save" prefWidth="200.0" accessibleText="Save Button" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

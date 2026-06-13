@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gymify.controllers.InterfaceEntraineurController">
+   <children>
+      <!-- Image de fond avec flou et opacité -->
+      <ImageView fitHeight="600.0" fitWidth="900.0" opacity="0.3" pickOnBounds="true">
+         <image>
+            <Image url="@images/ggym.jpeg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="10.0" />
+         </effect>
+      </ImageView>
+
+      <!-- Carte de profil -->
+      <AnchorPane fx:id="infouserid" layoutX="100.0" layoutY="204.0" prefHeight="240.0" prefWidth="700.0" styleClass="profile-card" stylesheets="@styles.css">
+         <children>
+            <!-- Image de profil avec clip circulaire -->
+            <ImageView fx:id="profileImage" fitHeight="120.0" fitWidth="128.0" layoutX="32.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <clip>
+                  <Circle centerX="60.0" radius="60.0" />
+               </clip>
+            </ImageView>
+
+            <!-- Informations utilisateur -->
+            <Label layoutX="200.0" layoutY="60.0" styleClass="label-title" stylesheets="@styles.css" text="Username:" />
+            <Label fx:id="usernameid" layoutX="300.0" layoutY="60.0" styleClass="label-value" text="Username" />
+
+            <Label layoutX="200.0" layoutY="100.0" styleClass="label-title" text="Email:" />
+            <Label fx:id="emailid" layoutX="300.0" layoutY="100.0" styleClass="label-value" text="Email" />
+
+            <!-- Boutons -->
+            <Button fx:id="EditId1" layoutX="500.0" layoutY="60.0" mnemonicParsing="false" onAction="#editProfile" prefHeight="40.0" prefWidth="140.0" styleClass="button-primary" stylesheets="@styles.css" text="Edit Profile" />
+            <Button fx:id="EditId" layoutX="500.0" layoutY="120.0" mnemonicParsing="false" onAction="#showPlanning" prefHeight="40.0" prefWidth="140.0" styleClass="button-secondary" stylesheets="@styles.css" text="Planning" />
+         </children>
+      </AnchorPane>
+
+      <!-- Titre de bienvenue -->
+      <Text layoutX="150.0" layoutY="120.0" styleClass="welcome-text" text="Welcome To GYMIFY" textAlignment="CENTER" wrappingWidth="600.0" />
+
+      <!-- Logo -->
+      <ImageView fitHeight="80.0" fitWidth="140.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+
+      <!-- Bouton de déconnexion -->
+      <Button layoutX="750.0" layoutY="20.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" prefHeight="40.0" prefWidth="120.0" styleClass="logout-button" text="Sign Out" />
+   </children>
+
+   <!-- Styles CSS intégrés -->
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</AnchorPane>

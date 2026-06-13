@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.gymify.controllers.PaiementController"
+      spacing="10" alignment="CENTER">
+
+    <Label fx:id="abonnementLabel" text="Abonnement ID: " />
+    <Label fx:id="sportifLabel" text="Sportif ID: " />
+    <Label fx:id="salleLabel" text="Salle ID: " />
+    <Label fx:id="montantLabel" text="Montant: " />
+
+    <WebView fx:id="webView" prefWidth="600" prefHeight="400" />
+
+    <Button text="Payer" onAction="#creerIntentionPaiement" />
+</VBox>
